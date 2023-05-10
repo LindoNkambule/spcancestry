@@ -22,12 +22,12 @@ classifiers = [
       'Operating System :: MacOS'
 ]
 
-setup(name='SPCAncestry',
+setup(name='spcancestry',
       version='0.1.0',
       author='Lindokuhle Nkambule',
       author_email='lnkambule@hsph.harvard.edu',
-      url='https://SPCAncestry.readthedocs.io/',
-      project_urls={"GitHub": "https://github.com/lindonkambule/SPCAncestry"},
+      url='https://github.com/LindoNkambule/spcancestry',
+      project_urls={"GitHub": "https://github.com/LindoNkambule/spcancestry"},
       description='SPCAncestry: A Python package for inferring population ancestry.',
       long_description=long_description,
       long_description_content_type="text/markdown",

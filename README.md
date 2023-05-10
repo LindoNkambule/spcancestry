@@ -2,9 +2,9 @@
 A Python package for supervised global population ancestry inference from SNP data using stacking
 
 ## Installation
-SPCAncestry will soon be available through PyPI and installable using the following command:
+SPCAncestry is available through [PyPI](https://pypi.org/project/spcancestry/0.1.0/) and installable using the following command:
 ```bash
-pip3 install spcancestry
+pip3 install spcancestry==0.1.0
 ```
 
 ## Usage
