@@ -48,3 +48,17 @@ ggplot(combined_df, aes(x=gnomad, y=spcancestry, size = N)) +
   ylab("SPCAncestry stacking probability") +
   theme_bw()
 
+# 2. Investigate the two samples where SPCAncestry was unable to correctly classify (Section 3.1)
+## A. AFR sample
+spcancestry |> filter(true_pop == "AFR" & prob_AFR < 0.9)
+gnomad |> filter(true_pop == "AFR" & prob_AFR < 0.9)
+
+## B. CSA sample
+spcancestry |> filter(true_pop == "CSA" & prob_CSA < 0.9)
+gnomad |> filter(true_pop == "CSA" & prob_CSA < 0.9)
+
+
+# 3. MID classification comparison (Section 3.1)
+spcancestry |> filter(true_pop == "MID" & prob_MID < 0.9)
+gnomad |> filter(true_pop == "MID" & prob_MID < 0.9)
+
