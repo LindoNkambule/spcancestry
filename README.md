@@ -34,5 +34,12 @@ scores_df, colnames = spcancestry.PCProject(ref_mt=inref_mt, data_mt=input_mt,
 spcancestry_infered = spcancestry.infer_ancestry(scores_df, colnames)
 ```
 
+## Performance
+Below is a figure, stratified by true population label, showing how SPCAncestry performs at correctly
+classifying samples to true population ancestry vs. the gnomAD RF. We use an arbitrary probability
+threshold of >= 0.9 to classify a sample as belonging to a population
+
+![performance comparison with gnomAD RF](paper/fig1.png)
+
 ## Copyright and License
 SPCAncestry is generously distributed under the [MIT License](https://github.com/LindoNkambule/spcancestry/blob/main/LICENSE)
