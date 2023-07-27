@@ -46,10 +46,15 @@ combined_df
 ggplot(combined_df, aes(x=gnomad, y=spcancestry, size=N)) +
   geom_point() +
   geom_point(data=combined_df |>
-               filter(gnomad < 0.9 | spcancestry < 0.9),
+               filter(gnomad < 0.9),
              pch=24,
              size=3, 
              colour="red") +
+  geom_point(data=combined_df |>
+               filter(spcancestry < 0.9),
+             pch=21,
+             size=5, 
+             colour="blue") +
   facet_wrap(. ~ pop, ncol = 3) +
   xlab("gnomAD RF probability") +
   ylab("SPCAncestry stacking probability") +
