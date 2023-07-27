@@ -41,8 +41,15 @@ for (pop in pops){
   combined_df <- rbind(combined_df, df_pop_counts)
 }
 
-ggplot(combined_df, aes(x=gnomad, y=spcancestry, size = N)) +
+combined_df
+
+ggplot(combined_df, aes(x=gnomad, y=spcancestry, size=N)) +
   geom_point() +
+  geom_point(data=combined_df |>
+               filter(gnomad < 0.9 | spcancestry < 0.9),
+             pch=24,
+             size=3, 
+             colour="red") +
   facet_wrap(. ~ pop, ncol = 3) +
   xlab("gnomAD RF probability") +
   ylab("SPCAncestry stacking probability") +
