@@ -37,7 +37,8 @@ spcancestry_infered = spcancestry.infer_ancestry(scores_df, colnames)
 ## Performance
 Below is a figure, stratified by true population label, showing how SPCAncestry performs at correctly
 classifying samples to true population ancestry vs. the gnomAD RF. We use a probability
-threshold of >= 0.9 to classify a sample as belonging to a population
+threshold of >= 0.9 to classify a sample as belonging to a population. As shown in the figure, stacking outperforms (fewer blue circles)
+RF (many red triangles) at correctly classifying individuals to their respective population ancestry.
 
 ![performance comparison with gnomAD RF](paper/fig1.png)
 
